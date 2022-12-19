@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>online.superh.boot</groupId>
+    <artifactId>superharo</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+
+    <name>${project.artifactId}</name>
+    <description>项目基础脚手架</description>
+    <url>https://github.com/superharo/superharo</url>
+    <modules>
+
+        <module>superharo-framework</module>
+        <module>superharo-demo</module>
+        <module>superharo-demo/superharo-demo-mapstruct</module>
+    </modules>
+
+    <properties>
+        <revision>1.0.0</revision>
+        <!-- Maven 相关 -->
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <!-- 项目构建 相关 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>online.superh.boot</groupId>
+                <artifactId>superharo-dependencies</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+    </build>
+
+</project>
