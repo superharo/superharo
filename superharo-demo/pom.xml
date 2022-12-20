@@ -5,7 +5,7 @@
     <parent>
         <groupId>online.superh.boot</groupId>
         <artifactId>superharo</artifactId>
-        <version>${revision}</version>
+        <version>1.0.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
