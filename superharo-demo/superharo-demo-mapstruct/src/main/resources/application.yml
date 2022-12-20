@@ -1,9 +1,49 @@
 server:
-  port:
+  port: 8001
 spring:
   application:
     name: superharo-demo-mapstruct
-
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/**这里是库名**?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username:
+    password:
+    # Druid 【监控】相关的全局配置
+    druid:
+      min-idle: 10 # 最小连接池数量
+      max-active: 20 # 最大连接池数量
+      max-wait: 600000 # 配置获取连接等待超时的时间，单位：毫秒
+      time-between-eviction-runs-millis: 60000 # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位：毫秒
+      min-evictable-idle-time-millis: 300000 # 配置一个连接在池中最小生存的时间，单位：毫秒
+      max-evictable-idle-time-millis: 900000 # 配置一个连接在池中最大生存的时间，单位：毫秒
+      validation-query: SELECT 1 # 配置检测连接是否有效
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+        allow: # 设置白名单，不填则允许所有访问
+        url-pattern: /druid/*
+        login-username: # 控制台管理用户名和密码
+        login-password:
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true # 慢 SQL 记录
+          slow-sql-millis: 100
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+            initial-size: 5 # 初始连接数
+  # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
+  redis:
+    host: 127.0.0.1 # 地址
+    port: 6379 # 端口
+    database: 0 # 数据库索引
+#    password: 123456 # 密码，建议生产环境开启
 superharo:
   info:
     version: 1.0.0

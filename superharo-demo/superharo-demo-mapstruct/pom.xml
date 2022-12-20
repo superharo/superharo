@@ -26,19 +26,23 @@
     <dependencies>
         <!-- Web 相关 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>online.superh.boot</groupId>
+            <artifactId>superharo-spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- DB -->
+        <dependency>
+            <groupId>online.superh.boot</groupId>
+            <artifactId>superharo-spring-boot-starter-redis</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId> <!-- use mapstruct-jdk8 for Java 8 or higher -->
-            <version>${mapstruct.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-jdk8</artifactId>
-            <version>${mapstruct.version}</version>
         </dependency>
 
         <dependency>

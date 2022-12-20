@@ -20,15 +20,20 @@ public class BannerApplicationRunner implements ApplicationRunner {
     @Value("${spring.application.name}")
     private String applicationName;
 
+    @Value("${server.port}")
+    private Integer port;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         ThreadUtil.execute(() -> {
             ThreadUtil.sleep(1, TimeUnit.SECONDS); // 延迟 1 秒，保证输出到结尾
             log.info("\n---------------------------------------------------------" +
                             "\n应用启动成功:{}" +
-                            "\nGithub仓库: {}" +
+                            "\n本地访问路径:{}" +
+                            "\nGithub_仓库:{}" +
                             "\n----------------------------------------------------------",
                     applicationName,
+                    "http://localhost:"+port,
                     "https://github.com/superharo/superharo");
         });
     }
