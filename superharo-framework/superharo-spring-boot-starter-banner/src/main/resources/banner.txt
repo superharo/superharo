@@ -1,4 +1,4 @@
-SuperHaro Starting!!!
+${spring.application.name} Starting!!!
 Application Version: ${superharo.info.version}
 Spring Boot Version: ${spring-boot.version}
 ////////////////////////////////////////////////////////////////////

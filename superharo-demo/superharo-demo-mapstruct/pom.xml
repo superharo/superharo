@@ -2,14 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>online.superh.boot</groupId>
         <artifactId>superharo-demo</artifactId>
         <version>${revision}</version>
     </parent>
 
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
     <artifactId>superharo-demo-mapstruct</artifactId>
+    <name>${project.artifactId}</name>
     <description>
         与动态映射框架相比，MapStruct 具有以下优点：
             使用纯 Java 方法代替 Java 反射机制快速执行。
@@ -42,11 +44,23 @@
             <version>${mapstruct.version}</version>
         </dependency>
 
+        <dependency>
+            <!-- 用于生成自定义的 Spring @ConfigurationProperties 配置类的说明文件 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
         <!-- Test 测试相关 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>online.superh.boot</groupId>
+            <artifactId>superharo-common</artifactId>
         </dependency>
 
         <dependency>

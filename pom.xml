@@ -13,10 +13,8 @@
     <description>项目基础脚手架</description>
     <url>https://github.com/superharo/superharo</url>
     <modules>
-
         <module>superharo-framework</module>
         <module>superharo-demo</module>
-        <module>superharo-demo/superharo-demo-mapstruct</module>
     </modules>
 
     <properties>
@@ -41,8 +39,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
-    </build>
 
 </project>

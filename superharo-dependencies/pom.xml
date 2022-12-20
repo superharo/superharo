@@ -7,6 +7,7 @@
     <groupId>online.superh.boot</groupId>
     <artifactId>superharo-dependencies</artifactId>
     <version>${revision}</version>
+    <packaging>pom</packaging>
     <description>管理整个项目的依赖版本</description>
 
     <properties>
@@ -33,19 +34,20 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- superharo  -->
             <dependency>
                 <groupId>online.superh.boot</groupId>
                 <artifactId>superharo-spring-boot-starter-banner</artifactId>
                 <version>${revision}</version>
             </dependency>
 
-            <!-- 工具类 -->
-
             <dependency>
                 <groupId>online.superh.boot</groupId>
                 <artifactId>superharo-common</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <!-- 工具类 -->
 
             <dependency>
                 <groupId>cn.hutool</groupId>

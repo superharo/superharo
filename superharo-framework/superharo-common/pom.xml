@@ -10,12 +10,19 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>superharo-common</artifactId>
-    <packaging>pom</packaging>
-
+    <packaging>jar</packaging>
     <name>${project.artifactId}</name>
     <description>定义基础 pojo 类、枚举、工具类等等</description>
 
     <dependencies>
+
+        <dependency>
+            <!-- 用于生成自定义的 Spring @ConfigurationProperties 配置类的说明文件 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
         <!-- 工具类相关 -->
         <dependency>
             <groupId>org.projectlombok</groupId>

@@ -2,6 +2,7 @@ package online.superh.boot.framework.banner.core;
 
 import cn.hutool.core.thread.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 
@@ -16,14 +17,18 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class BannerApplicationRunner implements ApplicationRunner {
 
+    @Value("${spring.application.name}")
+    private String applicationName;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         ThreadUtil.execute(() -> {
             ThreadUtil.sleep(1, TimeUnit.SECONDS); // 延迟 1 秒，保证输出到结尾
-            log.info("\n----------------------------------------------------------\n\t" +
-                            "项目启动成功！\n\t" +
-                            "Github仓库: \t{} \n\t" +
-                            "----------------------------------------------------------",
+            log.info("\n---------------------------------------------------------" +
+                            "\n应用启动成功:{}" +
+                            "\nGithub仓库: {}" +
+                            "\n----------------------------------------------------------",
+                    applicationName,
                     "https://github.com/superharo/superharo");
         });
     }

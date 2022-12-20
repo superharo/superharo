@@ -1,0 +1,9 @@
+server:
+  port:
+spring:
+  application:
+    name: superharo-demo-mapstruct
+
+superharo:
+  info:
+    version: 1.0.0
