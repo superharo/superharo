@@ -30,10 +30,12 @@ public class BannerApplicationRunner implements ApplicationRunner {
             log.info("\n---------------------------------------------------------" +
                             "\n应用启动成功:{}" +
                             "\n本地访问路径:{}" +
+                            "\nSQL监控面板:{}" +
                             "\nGithub_仓库:{}" +
                             "\n----------------------------------------------------------",
                     applicationName,
                     "http://localhost:"+port,
+                    "http://localhost:"+port+"/druid/sql.html",
                     "https://github.com/superharo/superharo");
         });
     }

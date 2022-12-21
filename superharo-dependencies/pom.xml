@@ -39,6 +39,8 @@
             </dependency>
 
             <!-- DB -->
+
+            <!-- DB_SQL -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
@@ -53,6 +55,13 @@
 
             <dependency>
                 <groupId>online.superh.boot</groupId>
+                <artifactId>superharo-spring-boot-starter-mybatis-plus</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- DB_NOSQL -->
+            <dependency>
+                <groupId>online.superh.boot</groupId>
                 <artifactId>superharo-spring-boot-starter-redis</artifactId>
                 <version>${revision}</version>
             </dependency>
@@ -63,7 +72,7 @@
                 <version>${redisson.version}</version>
             </dependency>
 
-            <!-- superharo-framework -->
+            <!-- framework -->
             <dependency>
                 <groupId>online.superh.boot</groupId>
                 <artifactId>superharo-spring-boot-starter-banner</artifactId>

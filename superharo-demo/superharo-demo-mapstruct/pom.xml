@@ -33,6 +33,11 @@
         <!-- DB -->
         <dependency>
             <groupId>online.superh.boot</groupId>
+            <artifactId>superharo-spring-boot-starter-mybatis-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>online.superh.boot</groupId>
             <artifactId>superharo-spring-boot-starter-redis</artifactId>
         </dependency>
 

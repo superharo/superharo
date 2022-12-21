@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  online.superh.boot.framework.mybatis.plus.config.SuperharoMyBatisPlusAutoConfiguration,\
+  online.superh.boot.framework.datasource.config.SuperharoDatatSourseAutoConfiguration
