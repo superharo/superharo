@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  online.superh.boot.framework.security.config.SuperharoSecurityAutoConfiguration
+  online.superh.boot.framework.security.config.SuperharoWebSecurityConfigurerAdapter,\
+  online.superh.boot.framework.security.config.SuperharoSecurityConfiguration

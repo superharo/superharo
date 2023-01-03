@@ -19,7 +19,6 @@ public class SecurityProperties {
     @NotEmpty(message = "Token Header 不能为空")
     private String tokenHeader = "Authorization";
 
-
     /**
      * 免登录的 URL 列表
      */
